@@ -27,14 +27,16 @@ public class ElevatorSubsystem extends SubsystemBase {
     private final PIDController pidController;
 
     // Define elevator positions in encoder counts
-    private static final double MAX_HEIGHT = 100.0; // Adjust based on your elevator
+    private static final double MAX_HEIGHT = 50.0; // Adjust based on your elevator
     private static final double MIN_HEIGHT = 0.0;
 
     public static final double HOME_POSITION = 0.0;
-    public static final double POSITION_1 = 20.0;
-    public static final double POSITION_2 = 40.0;
-    public static final double POSITION_3 = 60.0;
-    public static final double POSITION_4 = 80.0;
+    public static final double POSITION_1 = 7.0;
+    public static final double POSITION_PickupCoral = 12.4;
+    public static final double POSITION_2 = 15.0;
+    public static final double POSITION_SwingArmWithCoral = 16.9;
+    public static final double POSITION_3 = 25.0;
+    public static final double POSITION_4 = 45.0;
 
     // PID constants
     private static final double kP = 0.1;
@@ -45,8 +47,8 @@ public class ElevatorSubsystem extends SubsystemBase {
 
     private static final int MASTER_MOTOR_ID = 21;
     private static final int FOLLOWER_MOTOR_ID = 22;
-    private static final double MAX_OUTPUT = 0.7;
-    private static final double MIN_OUTPUT = -0.7;
+    private static final double MAX_OUTPUT = 0.5;
+    private static final double MIN_OUTPUT = -0.5;
 
     private static final double RAMP_RATE = 0.25;
 
