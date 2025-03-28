@@ -17,23 +17,24 @@ public class ArmSubsystem extends SubsystemBase {
     private final PIDController pidController;
 
     // Define arm positions in encoder counts (degrees)
-    public static final double HOME_POSITION = 0.0;
-    public static final double POSITION_1 = 45.0;
-    public static final double POSITION_2 = 90.0;
+    public static final double HOME_POSITION = -2.0;
+    public static final double POSITION_1 = 2.0;
+    public static final double POSITION_2 = 12.0;
+    public static final double POSITION_3 = 17.0;
 
     // PID constants
     private static final double kP = 0.05;
     private static final double kI = 0.0;
     private static final double kD = 0.001;
-    private static final double kG = 0.1; // Gravity compensation constant
+    private static final double kG = 0.2; // Gravity compensation constant
 
     // Motor constants
     private static final int MOTOR_ID = 23;
-    private static final double MAX_OUTPUT = 0.5;
-    private static final double MIN_OUTPUT = -0.5;
-    private static final double MAX_ANGLE = 100.0;
+    private static final double MAX_OUTPUT = 0.25; //was 0.5
+    private static final double MIN_OUTPUT = -0.25;//Was 0.5
+    private static final double MAX_ANGLE = 20.0;
     private static final double MIN_ANGLE = -5.0;
-    private static final double RAMP_RATE = 0.25;
+    private static final double RAMP_RATE = 0.07; // Was 0.25
 
     private double setPoint = HOME_POSITION;
 
